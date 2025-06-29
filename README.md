@@ -8,20 +8,6 @@ Downflix is a cross-platform desktop application built with [Svelte](https://sve
 - Optional start and end times for trimming.
 - Invokes `yt-dlp` through Tauri's Rust backend.
 
-## Installation
-
-Run the platform script to install prerequisites. On Linux:
-
-```bash
-./install-linux.sh
-```
-
-On Windows (PowerShell):
-
-```powershell
-./install-windows.ps1
-```
-
 ## Development
 
 ```
