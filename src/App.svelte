@@ -1,11 +1,12 @@
 <script>
-  import { invoke } from '@tauri-apps/api';
+
   let url = '';
   let format = 'mp4';
   let start = '';
   let end = '';
   let status = '';
   let progress = 0;
+
 
   async function download() {
     status = 'Downloading...';
@@ -18,6 +19,7 @@
       status = 'Error: ' + e;
     }
   }
+
 </script>
 
 <main>
