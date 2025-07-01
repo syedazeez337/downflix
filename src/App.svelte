@@ -1,7 +1,4 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-  import { invoke } from '@tauri-apps/api/tauri';
-  import { listen } from '@tauri-apps/api/event';
 
   let url = '';
   let format = 'mp4';
@@ -9,7 +6,7 @@
   let end = '';
   let status = '';
   let progress = 0;
-  let unlisten;
+
 
   async function download() {
     status = 'Downloading...';
@@ -23,15 +20,6 @@
     }
   }
 
-  onMount(async () => {
-    unlisten = await listen('progress', (e) => {
-      progress = e.payload / 100;
-    });
-  });
-
-  onDestroy(() => {
-    if (unlisten) unlisten();
-  });
 </script>
 
 <main>
